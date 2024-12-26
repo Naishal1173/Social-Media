@@ -1,0 +1,269 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Register Page Layout */
+.register-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Left Section */
+.register-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers vertically */
+  align-items: center; /* Centers horizontally */
+  background: linear-gradient(180deg, #6eb3ef 0%, #3a91dc 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.register-left {
+  padding-left: 40px;
+}
+
+.register-left-content {
+  padding-right: 25px;
+  padding-top: 0px;
+}
+
+
+.register-left::before,
+.register-left::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.register-left::before {
+  width: 400px;
+  height: 400px;
+  top: -150px;
+  left: -150px;
+}
+
+.register-left::after {
+  width: 600px;
+  height: 600px;
+  bottom: -250px;
+  right: -200px;
+}
+
+.signin-img {
+  width: 350px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.slide-title {
+  font-size: 23px;
+  color: #fff;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 10px;
+  text-align: center; /* Ensures the title is centered */
+  line-height: 1.5; /* Adjust spacing between lines if the title wraps */
+}
+
+.slide-description {
+  font-size: 15px;
+  color: #f3f3f3;
+  text-align: center; /* Centers the text */
+  margin: 0 auto; /* Centers the block */
+  max-width: 400px; /* Ensures the description doesn't stretch too wide */
+  line-height: 1.6; /* Adjust spacing for readability */
+}
+/* Right Section */
+.register-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+
+}
+
+.form-container {
+  width: 100%;
+  padding-left: 200px;
+  max-width: 400px;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo-icon {
+  font-weight: bold;
+  font-size: 32px;
+  color: #007bff;
+}
+
+.logo-text {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #333;
+}
+
+.greeting-message {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #555;
+  text-align: center;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  width: 400px;
+  text-align: center;
+  padding-left: 0px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.input-field:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.send-otp-btn,
+.register-btn {
+  width: 400px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.send-otp-btn:hover,
+.register-btn:hover {
+
+  background-color: #0056b3;
+}
+
+/* Center the login redirect container */
+.login-redirect {
+  font-size: 14px;
+  display: flex; /* Use Flexbox */
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Vertically center if needed */
+  margin-top: 10px;
+  padding-left: 65px;
+}
+
+/* Link style */
+.login-redirect a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 5px;
+}
+
+.login-redirect a:hover {
+  text-decoration: underline;
+}
+
+
+
+.otp-timer {
+  font-size: 12px;
+  text-align: center;
+  color: #333;
+  margin-top: 5px;
+}
+
+.brand-logo {
+  display: flex;
+  flex-direction: row;  /* Change to row to align items horizontally */
+  align-items: center;  /* Vertically align items in the center */
+  justify-content: center;  /* Optional: centers the content horizontally */
+  padding-left: 50px;
+  margin-bottom: 0px;
+
+}
+
+.brand-logo .logo-icon {
+  width: 50px; /* Adjust the size of the logo icon */
+  height: 50px;
+  border-radius: 50%;
+  background-color: #007bff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  margin-right: 10px; /* Add some space between logo icon and text */
+}
+
+.brand-logo .logo-text {
+  font-size: 40px; /* Increase the logo text size */
+  font-family: 'Arial', sans-serif;
+  color: #2764e9;
+  font-weight: 600;
+}
+
+
+/* Greeting message adjustment */
+.mts-3 {
+  margin-top: 20px; /* Add space above the greeting message */
+  font-size: 20px;
+  width: 100%;
+  text-align: center;
+  line-height: 1.6; /* Ensure proper spacing between lines */
+}
+
+.font-size-16 {
+  font-size: 15px;
+  color: #555;
+  text-align: center;
+  padding-left: 80px;
+}
+
+/* Ensure mobile responsiveness */
+@media (max-width: 768px) {
+  .brand-logo .logo-text {
+    font-size: 28px; /* Make logo text smaller for mobile */
+  }
+  .mts-3 {
+    font-size: 18px; /* Adjust greeting message font size */
+  }
+}
+
+/* Add font styling to form-data */
+h6.form-data {
+  font-family: 'Arial', sans-serif;  /* You can change this to any other font-family */
+  font-size: 14px;  /* Adjust the font size */
+  font-weight: bold;  /* Make the font bold */
+  color: #333;  /* Set the color */
+  margin-bottom: 10px;  /* Add margin to separate from inputs */
+}

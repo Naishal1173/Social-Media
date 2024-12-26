@@ -1,0 +1,54 @@
+/* Sidebar Styles */
+.sidebar {
+  transition: width 0.3s ease, padding-left 0.3s ease; 
+  padding-left: 22px;
+}
+
+.sidebar.open {
+  width: 250px; /* Adjust to your desired expanded width */
+  margin-left: -22px;
+}
+
+.sidebar.closed {
+  width: 60px; /* Adjust to your desired collapsed width */
+  padding-left: 0; /* Remove padding when sidebar is collapsed */
+}
+
+/* Sidebar toggle button styles */
+.sidebar-toggle {
+  cursor: pointer;
+}
+
+/* Menu button inside sidebar */
+.menu-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Right icon animation */
+.right-icon {
+  transition: transform 0.3s ease;
+}
+
+/* Hide the sidebar body when closed */
+.sidebar-body.hidden {
+  display: none;
+}
+
+/* Add padding to the main content when sidebar is open or closed */
+.main-content {
+  transition: padding-left 0.3s ease;
+}
+
+.sidebar.open + .main-content {
+  padding-left: 250px; /* Adjust padding when sidebar is open */
+}
+
+.sidebar.closed + .main-content {
+  padding-left: 60px; /* Adjust padding when sidebar is collapsed */
+}
+.nav-link.active {
+  color: blue; /* or any other style to indicate the active link */
+  font-weight: bold;
+}

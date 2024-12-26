@@ -1,0 +1,37 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\bhand\\OneDrive\\Documents\\7 sem\\WeconnectAdmin\\WeconnectAdmin\\wwwroot\\css\\Style1.css",
+      "PackagePath": "staticwebassets\\css\\Style1.css"
+    },
+    {
+      "Id": "C:\\Users\\bhand\\OneDrive\\Documents\\7 sem\\WeconnectAdmin\\WeconnectAdmin\\wwwroot\\css\\Style2.css",
+      "PackagePath": "staticwebassets\\css\\Style2.css"
+    },
+    {
+      "Id": "C:\\Users\\bhand\\OneDrive\\Documents\\7 sem\\WeconnectAdmin\\WeconnectAdmin\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\bhand\\OneDrive\\Documents\\7 sem\\WeconnectAdmin\\WeconnectAdmin\\wwwroot\\css\\style3.css",
+      "PackagePath": "staticwebassets\\css\\style3.css"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.WeconnectAdmin.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.WeconnectAdmin.props",
+      "PackagePath": "build\\WeconnectAdmin.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.WeconnectAdmin.props",
+      "PackagePath": "buildMultiTargeting\\WeconnectAdmin.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.WeconnectAdmin.props",
+      "PackagePath": "buildTransitive\\WeconnectAdmin.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

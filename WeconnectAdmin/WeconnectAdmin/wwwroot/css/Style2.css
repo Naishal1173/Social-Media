@@ -1,0 +1,136 @@
+﻿/* General page styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #495057;
+    margin: 0;
+    padding: 0;
+}
+
+/* Page wrapper for proper spacing */
+.page-wrapper {
+    margin: 20px;
+    padding: 20px;
+}
+
+/* Header Styling */
+.page-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+    .page-header h1 {
+        font-size: 2.5rem;
+        color: #343a40;
+        font-weight: 600;
+    }
+
+/* Card container */
+.card {
+    border: 1px solid #e3e4e8;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    padding-right:100px;
+}
+
+/* Table Styling */
+.table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    table-layout: fixed;
+    border: 1px solid #dee2e6;
+    font-size: 13px;
+}
+
+    .table th,
+    .table td {
+        padding: 16px;
+        text-align: left;
+        border-bottom: 1px solid #dee2e6;
+        word-wrap: break-word;
+    }
+
+    .table th {
+        background-color: #f8f9fa;
+        color: #495057;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .table tbody tr:nth-child(odd) {
+        background-color: #f9f9f9;
+    }
+
+    .table tbody tr:hover {
+        background-color: #e9ecef;
+    }
+
+/* Action Button Styling */
+button {
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Primary Button (Delete) */
+.btn-danger {
+    background-color: #dc3545;
+    border: 1px solid #dc3545;
+    color: white;
+    font-weight: 600;
+}
+
+    .btn-danger:hover {
+        background-color: #c82333;
+        border-color: #bd2130;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+/* Mobile-Responsive Styles */
+@media (max-width: 768px) {
+    .table th, .table td {
+        padding: 12px;
+    }
+
+    .table {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .page-wrapper {
+        margin: 10px;
+        padding: 15px;
+    }
+}
+
+/* Mobile Adjustment for Tables */
+@media (max-width: 576px) {
+    .table th, .table td {
+        padding: 8px;
+    }
+
+    .table {
+        font-size: 12px;
+    }
+
+    .btn {
+        padding: 6px 12px;
+    }
+}

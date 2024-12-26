@@ -1,0 +1,235 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+  
+/* Login Page Layout */
+.custom-login-page {
+    display: flex;
+    height: 100vh;
+}
+  
+/* Left Section */
+.custom-left-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #6eb3ef 0%, #3a91dc 100%);
+    position: relative;
+    overflow: hidden;
+    padding-left: 50px;
+}
+  
+.custom-left-content {
+    text-align: center;
+    padding-right: 70px;
+}
+  
+.custom-left-section::before,
+.custom-left-section::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+}
+  
+.custom-left-section::before {
+    width: 400px;
+    height: 400px;
+    top: -150px;
+    left: -150px;
+}
+  
+.custom-left-section::after {
+    width: 600px;
+    height: 600px;
+    bottom: -250px;
+    right: -200px;
+}
+  
+.custom-signin-image {
+    width: 350px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+  
+.custom-slide-title {
+    font-size: 23px;
+    color: #fff;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 10px;
+    text-align: center;
+}
+  
+.custom-slide-description {
+    font-size: 15px;
+    color: #f3f3f3;
+    text-align: center;
+    max-width: 400px;
+    line-height: 1.6;
+}
+  
+/* Right Section */
+.custom-right-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+  
+.custom-form-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 12px;
+}
+  
+.custom-brand-logo {
+    display: flex;
+    flex-direction: row;  /* Align items horizontally */
+    align-items: center;  /* Vertically center items */
+    justify-content: center;  /* Centers content horizontally */
+    width: 100%;            /* Ensures the logo spans the full width of its parent */
+    padding-left: 0px;    /* Space on the left */
+    margin-bottom: 0px;     /* Remove bottom margin */
+}
+
+/* Adjust logo icon width */
+.custom-logo-icon {    
+    width: 50px;  /* Let the width be flexible */
+    max-width: 60px;  /* Limit the maximum width */
+    height: 40px;    
+    border-radius: 50%;    /* Make the icon circular */
+    background-color: #007bff;  /* Set background color */
+    display: flex;         /* Use flexbox to center the content */
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    margin-right: 10px;    /* Space between the icon and logo text */
+}
+
+/* Logo text styling */
+.custom-logo-text {
+    font-size: 40px;          /* Large font size */
+    font-family: 'Arial', sans-serif;
+    color: #2764e9;           /* Blue color for text */
+    font-weight: 600;         /* Bold text */
+}
+
+/* Optional: Fix layout in case of smaller screens */
+@media (max-width: 768px) {
+    .custom-brand-logo {
+        padding-left: 50px;  /* Adjust padding for mobile view */
+    }
+    .custom-logo-text {
+        font-size: 28px;      /* Smaller font size on smaller screens */
+    }
+}
+  
+.custom-welcome-message {
+    margin-top: 20px;
+    margin-left: 27px;
+    font-size: 15px;
+    color: #555;
+    text-align: center;
+    line-height: 1.6;
+}
+  
+/* Input Group */
+.custom-input-group {
+    margin-bottom: 15px;
+    width: 400px;
+    text-align: center;
+    padding-left: 10px;
+}
+  
+.custom-input-field {
+    width: 400px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+}
+  
+.custom-input-field:focus {
+    border-color: #007bff;
+    outline: none;
+}
+  
+.custom-login-button {
+    width: 400px;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: white;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+.custom-login-button:hover {
+    background-color: #0056b3;
+}
+  
+.custom-error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}
+  
+/* Redirect Section */
+.custom-login-redirect {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 64px;
+}
+  
+.custom-login-redirect a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+  
+.custom-login-redirect a:hover {
+    text-decoration: underline;
+}
+  
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .custom-brand-logo .custom-logo-text {
+        font-size: 28px;
+    }
+    .custom-form-container {
+        padding: 15px;
+    }
+}
+.custom-form-label {
+    font-size: 16px;       /* Adjust the font size */
+    font-weight: 600;      /* Bold the text */
+    color: #333;          /* Set the text color */
+    margin-bottom: 8px;    /* Space between the label and input */
+    text-align: left;      /* Align text to the left */
+    display: block;        /* Make it a block element to take up full width */
+    font-family: 'Plus Jakarta Sans', sans-serif; /* Set the font */
+}

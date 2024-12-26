@@ -1,0 +1,37 @@
+﻿@model WeconnectAdmin.Models.User
+
+@{
+    ViewData["Title"] = "Confirm Deletion";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="/admin-template/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/admin-template/assets/fonts/bootstrap/bootstrap-icons.css" />
+    <link rel="stylesheet" href="/admin-template/assets/css/main.min.css" />
+</head>
+<body>
+    <div class="page-wrapper">
+        <div class="main-container">
+            <header class="page-header">
+                <h1>@ViewData["Title"]</h1>
+            </header>
+            <div class="content">
+                <div class="card">
+                    <div class="card-body">
+                        <h5>Are you sure you want to delete the user "@Model.Username"?</h5>
+                        <!-- Form for confirmation -->
+                        <form method="post">
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

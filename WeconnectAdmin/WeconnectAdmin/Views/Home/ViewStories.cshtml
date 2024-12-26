@@ -1,0 +1,237 @@
+﻿@model List<WeconnectAdmin.Models.Story>
+
+@{
+    ViewData["Title"] = "View Stories";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>@ViewData["Title"] - WeConnect Admin Dashboard</title>
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        /* Custom page-header styling */
+        .page-header {
+            background-color: #ced4da;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding-right: 167px;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+        }
+
+            .brand-logo .logo-icon {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: #4e73df; /* Change to your preferred color */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                font-weight: bold;
+                margin-right: 10px;
+            }
+
+            .brand-logo .logo-text {
+                font-size: 24px;
+                font-family: 'Arial', sans-serif;
+                color: #4e73df; /* Same color as the icon */
+                font-weight: 600;
+            }
+
+        .active-page-link {
+            background-color: #4e73df; /* Blue background for active link */
+            color: white !important; /* White text color */
+            font-weight: 600;
+        }
+
+        /* Hover effect for links */
+        .sidebar-menu a:hover {
+            background-color: #f1f1f1;
+            color: #4e73df;
+            transition: background-color 0.3s ease;
+        }
+
+        .main-container {
+            margin-left: -19px;
+            margin-top: -20px;
+            padding: 20px;
+        }
+
+        /* Sidebar collapsed style */
+        .sidebar-wrapper.collapsed {
+            width: 80px;
+        }
+
+        .collapsed .sidebar-menu a {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Page Wrapper -->
+    <div class="page-wrapper">
+        <!-- Sidebar -->
+        <nav class="sidebar-wrapper" id="sidebar">
+            <div class="brand-logo">
+                <div class="logo-icon">
+                    W <!-- Custom logo icon, can be an initial or abstract design -->
+                </div>
+                <span class="logo-text">WeConnect</span>
+            </div><br />
+            <div class="sidebar-menu">
+                <ul class="list-unstyled">
+                    <li class="@((ViewData["Title"]?.ToString() == "Dashboard") ? "active-page-link" : "")">
+                        <a href="@Url.Action("Index", "Home")">
+                            <i class="bi bi-bar-chart-line"></i>
+                            <span class="menu-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="@((ViewData["Title"]?.ToString() == "View Users") ? "active-page-link" : "")">
+                        <a href="@Url.Action("ViewUsers", "Home")">
+                            <i class="bi bi-person"></i>
+                            <span class="menu-text">View Users</span>
+                        </a>
+                    </li>
+                    <li class="@((ViewData["Title"]?.ToString() == "View Post") ? "active-page-link" : "")">
+                        <a href="@Url.Action("ViewPost", "Home")">
+                            <i class="bi bi-file-earmark-post"></i> <!-- New post icon here -->
+                            <span class="menu-text">View Post</span>
+                        </a>
+                    </li>
+                    <li class="@((ViewData["Title"]?.ToString() == "View Stories") ? "active-page-link" : "")">
+                        <a href="@Url.Action("ViewStories", "Home")">
+                            <i class="bi bi-file-earmark-image"></i> <!-- You can use a relevant icon -->
+                            <span class="menu-text">View Stories</span>
+                        </a>
+                    </li>
+                   
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main Container -->
+        <div class="main-container">
+            <!-- Header -->
+            <header class="page-header d-flex justify-content-between align-items-center px-3 py-2">
+                <div class="toggle-sidebar" id="toggle-sidebar">
+                    <i class="bi bi-list fs-3"></i>
+                </div>
+                <div class="header-actions-container">
+                    <div class="search-container me-4 d-none d-lg-block">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search" />
+                            <button class="btn btn-outline-secondary" type="button">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="header-profile d-flex align-items-center">
+                        @if (!string.IsNullOrEmpty(Context.Session.GetString("AdminUsername")))
+                        {
+                            <span class="user-name d-none d-md-block me-1">@Context.Session.GetString("AdminUsername")</span>
+                        }
+                        <div class="dropdown">
+                            <a href="javascript:void(0)" id="userSettings" class="user-settings d-flex align-items-center text-decoration-none" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="user-name d-none d-md-block me-1">Hello, @Context.Session.GetString("AdminUsername")</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userSettings">
+                                <!-- Log out Form -->
+                                <li>
+                                    <form action="@Url.Action("Logout", "Home")" method="post" class="dropdown-item">
+                                        <button type="submit" class="btn btn-link w-100 text-start">Logout</button>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </header>
+
+
+            <!-- Content -->
+            <div class="content-container">
+                <h1>@ViewData["Title"]</h1>
+                <div class="container">
+                    <div class="card">
+                        <div class="card-body">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Username</th>
+                                        <th>Image</th>
+                                        <th>Uploaded On</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var story in Model)
+                                    {
+                                        <tr>
+                                            <td>@story.Username</td>
+                                            <td>
+                                                <img src="@story.ImagePath" alt="Story Image" style="width: 100px; height: auto;" />
+                                            </td>
+                                            <td>@story.UploadedAt.ToString("MMM dd, yyyy")</td>
+                                            <td>
+                                                <!-- Add Delete Story option -->
+                                                <form method="post" action="@Url.Action("DeleteStory", "Home", new { id = story.Id })" style="display:inline;">
+                                                    @Html.AntiForgeryToken()
+                                                    <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this story?');">Delete</button>
+                                                </form>
+
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Toggle Sidebar visibility
+        // Toggle Sidebar visibility
+        const toggleSidebar = document.getElementById('toggle-sidebar');
+        const sidebar = document.getElementById('sidebar');
+        const mainContainer = document.querySelector('.main-container');
+
+        toggleSidebar?.addEventListener('click', () => {
+            sidebar.classList.toggle('collapsed');
+            mainContainer.classList.toggle('collapsed');
+        });
+
+        // Dropdown Menu handling (show only on first click)
+        const userSettings = document.getElementById('userSettings');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+
+        let dropdownOpened = false; // Flag to track if dropdown is opened
+
+        userSettings?.addEventListener('click', () => {
+            if (!dropdownOpened) {
+                dropdownMenu.classList.add('show'); // Show the dropdown on first click
+                dropdownOpened = true; // Mark as opened
+            }
+        });
+
+    </script>
+</body>
+</html>

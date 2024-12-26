@@ -1,0 +1,190 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\admin-template\**" />
+    <Compile Remove="wwwroot\admintemplate\**" />
+    <Content Remove="wwwroot\admin-template\**" />
+    <Content Remove="wwwroot\admintemplate\**" />
+    <EmbeddedResource Remove="wwwroot\admin-template\**" />
+    <EmbeddedResource Remove="wwwroot\admintemplate\**" />
+    <None Remove="wwwroot\admin-template\**" />
+    <None Remove="wwwroot\admintemplate\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter" Version="8.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="8.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="8.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="8.0.10" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="9.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.6" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore" Version="8.0.6" />
+    <PackageReference Include="SixLabors.ImageSharp" Version="3.1.5" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="Twilio" Version="7.6.0" />
+    <PackageReference Include="Vonage" Version="7.11.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="uploads\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\assets\css\bootstrap.min.css" />
+    <None Include="wwwroot\assets\css\login.css" />
+    <None Include="wwwroot\assets\css\main.min.css" />
+    <None Include="wwwroot\assets\fonts\bootstrap\bootstrap-icons.css" />
+    <None Include="wwwroot\assets\fonts\bootstrap\bootstrap-icons.woff" />
+    <None Include="wwwroot\assets\fonts\bootstrap\bootstrap-icons.woff2" />
+    <None Include="wwwroot\assets\fonts\rubik-mono\RubikMonoOne-Regular.ttf" />
+    <None Include="wwwroot\assets\images\bg.svg" />
+    <None Include="wwwroot\assets\images\cancel.svg" />
+    <None Include="wwwroot\assets\images\cards\american-express.png" />
+    <None Include="wwwroot\assets\images\cards\diners.png" />
+    <None Include="wwwroot\assets\images\cards\discover.png" />
+    <None Include="wwwroot\assets\images\cards\jcb.png" />
+    <None Include="wwwroot\assets\images\cards\mastercard.png" />
+    <None Include="wwwroot\assets\images\cards\visa.png" />
+    <None Include="wwwroot\assets\images\curve-line.svg" />
+    <None Include="wwwroot\assets\images\facebook.svg" />
+    <None Include="wwwroot\assets\images\favicon.svg" />
+    <None Include="wwwroot\assets\images\flags\1x1\au.svg" />
+    <None Include="wwwroot\assets\images\flags\1x1\de.svg" />
+    <None Include="wwwroot\assets\images\flags\1x1\hk.svg" />
+    <None Include="wwwroot\assets\images\flags\1x1\ru.svg" />
+    <None Include="wwwroot\assets\images\flags\1x1\tz.svg" />
+    <None Include="wwwroot\assets\images\flags\4x3\br.svg" />
+    <None Include="wwwroot\assets\images\flags\4x3\in.svg" />
+    <None Include="wwwroot\assets\images\flags\4x3\ua.svg" />
+    <None Include="wwwroot\assets\images\food\img1.jpg" />
+    <None Include="wwwroot\assets\images\food\img10.jpg" />
+    <None Include="wwwroot\assets\images\food\img2.jpg" />
+    <None Include="wwwroot\assets\images\food\img3.jpg" />
+    <None Include="wwwroot\assets\images\food\img4.jpg" />
+    <None Include="wwwroot\assets\images\food\img5.jpg" />
+    <None Include="wwwroot\assets\images\food\img6.jpg" />
+    <None Include="wwwroot\assets\images\food\img7.jpg" />
+    <None Include="wwwroot\assets\images\food\img8.jpg" />
+    <None Include="wwwroot\assets\images\food\img9.jpg" />
+    <None Include="wwwroot\assets\images\google.svg" />
+    <None Include="wwwroot\assets\images\infographic.svg" />
+    <None Include="wwwroot\assets\images\logo-dark.svg" />
+    <None Include="wwwroot\assets\images\logo-sm.svg" />
+    <None Include="wwwroot\assets\images\logo.svg" />
+    <None Include="wwwroot\assets\images\menu-arrow.svg" />
+    <None Include="wwwroot\assets\images\mobiles\mob1.jpg" />
+    <None Include="wwwroot\assets\images\mobiles\mob2.jpg" />
+    <None Include="wwwroot\assets\images\mobiles\mob3.jpg" />
+    <None Include="wwwroot\assets\images\mobiles\mob4.jpg" />
+    <None Include="wwwroot\assets\images\mobiles\mob5.jpg" />
+    <None Include="wwwroot\assets\images\mobiles\mob6.jpg" />
+    <None Include="wwwroot\assets\images\mobiles\mob7.jpg" />
+    <None Include="wwwroot\assets\images\mobiles\mob8.jpg" />
+    <None Include="wwwroot\assets\images\user.png" />
+    <None Include="wwwroot\assets\images\user1.png" />
+    <None Include="wwwroot\assets\images\user2.png" />
+    <None Include="wwwroot\assets\images\user3.png" />
+    <None Include="wwwroot\assets\images\user4.png" />
+    <None Include="wwwroot\assets\images\user5.png" />
+    <None Include="wwwroot\assets\js\bootstrap.bundle.min.js" />
+    <None Include="wwwroot\assets\js\jquery.min.js" />
+    <None Include="wwwroot\assets\js\main.js" />
+    <None Include="wwwroot\assets\js\modernizr.js" />
+    <None Include="wwwroot\assets\js\moment.js" />
+    <None Include="wwwroot\assets\js\validations.js" />
+    <None Include="wwwroot\assets\vendor\apex\apexcharts.min.js" />
+    <None Include="wwwroot\assets\vendor\apex\custom\dash1\analytics.js" />
+    <None Include="wwwroot\assets\vendor\apex\custom\dash1\reports.js" />
+    <None Include="wwwroot\assets\vendor\apex\custom\dash1\revenue.js" />
+    <None Include="wwwroot\assets\vendor\apex\custom\dash1\sales.js" />
+    <None Include="wwwroot\assets\vendor\apex\custom\dash1\sparkline.js" />
+    <None Include="wwwroot\assets\vendor\apex\custom\graphs\area.js" />
+    <None Include="wwwroot\assets\vendor\apex\custom\graphs\bar.js" />
+    <None Include="wwwroot\assets\vendor\apex\custom\graphs\candlestick.js" />
+    <None Include="wwwroot\assets\vendor\apex\custom\graphs\column-area.js" />
+    <None Include="wwwroot\assets\vendor\apex\custom\graphs\donut.js" />
+    <None Include="wwwroot\assets\vendor\apex\custom\graphs\heatmap.js" />
+    <None Include="wwwroot\assets\vendor\apex\custom\graphs\line.js" />
+    <None Include="wwwroot\assets\vendor\apex\custom\graphs\pie.js" />
+    <None Include="wwwroot\assets\vendor\apex\custom\profile\income.js" />
+    <None Include="wwwroot\assets\vendor\apex\custom\widgets\sparkline.js" />
+    <None Include="wwwroot\assets\vendor\apex\custom\widgets\sparkline2.js" />
+    <None Include="wwwroot\assets\vendor\calendar\css\custom.css" />
+    <None Include="wwwroot\assets\vendor\calendar\css\main.min.css" />
+    <None Include="wwwroot\assets\vendor\calendar\custom\daygrid-calendar.js" />
+    <None Include="wwwroot\assets\vendor\calendar\custom\draggable-calendar.js" />
+    <None Include="wwwroot\assets\vendor\calendar\custom\google-view-calendar.js" />
+    <None Include="wwwroot\assets\vendor\calendar\custom\list-view-calendar.js" />
+    <None Include="wwwroot\assets\vendor\calendar\custom\selectable-calendar.js" />
+    <None Include="wwwroot\assets\vendor\calendar\js\main.min.js" />
+    <None Include="wwwroot\assets\vendor\datatables\custom\custom-datatables.js" />
+    <None Include="wwwroot\assets\vendor\datatables\dataTables.bootstrap.min.js" />
+    <None Include="wwwroot\assets\vendor\datatables\dataTables.bs5-custom.css" />
+    <None Include="wwwroot\assets\vendor\datatables\dataTables.bs5.css" />
+    <None Include="wwwroot\assets\vendor\datatables\dataTables.min.js" />
+    <None Include="wwwroot\assets\vendor\daterange\custom-daterange.js" />
+    <None Include="wwwroot\assets\vendor\daterange\daterange.css" />
+    <None Include="wwwroot\assets\vendor\daterange\daterange.js" />
+    <None Include="wwwroot\assets\vendor\dropzone\dropzone.min.css" />
+    <None Include="wwwroot\assets\vendor\dropzone\dropzone.min.js" />
+    <None Include="wwwroot\assets\vendor\input-masks\cleave-custom.js" />
+    <None Include="wwwroot\assets\vendor\input-masks\cleave-phone.js" />
+    <None Include="wwwroot\assets\vendor\input-masks\cleave.min.js" />
+    <None Include="wwwroot\assets\vendor\jvectormap\continents-mill.js" />
+    <None Include="wwwroot\assets\vendor\jvectormap\custom\map-usa.js" />
+    <None Include="wwwroot\assets\vendor\jvectormap\custom\map-usa2.js" />
+    <None Include="wwwroot\assets\vendor\jvectormap\custom\world-map-markers3.js" />
+    <None Include="wwwroot\assets\vendor\jvectormap\custom\world-map-markers4.js" />
+    <None Include="wwwroot\assets\vendor\jvectormap\gdp-data.js" />
+    <None Include="wwwroot\assets\vendor\jvectormap\jquery-jvectormap-2.0.5.min.js" />
+    <None Include="wwwroot\assets\vendor\jvectormap\usa.js" />
+    <None Include="wwwroot\assets\vendor\jvectormap\us_aea.js" />
+    <None Include="wwwroot\assets\vendor\jvectormap\world-mill-en.js" />
+    <None Include="wwwroot\assets\vendor\morris\custom\area.js" />
+    <None Include="wwwroot\assets\vendor\morris\custom\barColors.js" />
+    <None Include="wwwroot\assets\vendor\morris\custom\dayData.js" />
+    <None Include="wwwroot\assets\vendor\morris\custom\donutColors.js" />
+    <None Include="wwwroot\assets\vendor\morris\custom\donutFormatter.js" />
+    <None Include="wwwroot\assets\vendor\morris\custom\morrisBar.js" />
+    <None Include="wwwroot\assets\vendor\morris\custom\negativeValues.js" />
+    <None Include="wwwroot\assets\vendor\morris\custom\stackedBar.js" />
+    <None Include="wwwroot\assets\vendor\morris\morris.css" />
+    <None Include="wwwroot\assets\vendor\morris\morris.min.js" />
+    <None Include="wwwroot\assets\vendor\morris\raphael-min.js" />
+    <None Include="wwwroot\assets\vendor\newsticker\custom-newsTicker.js" />
+    <None Include="wwwroot\assets\vendor\newsticker\newsTicker.min.js" />
+    <None Include="wwwroot\assets\vendor\overlay-scroll\custom-scrollbar.js" />
+    <None Include="wwwroot\assets\vendor\overlay-scroll\jquery.overlayScrollbars.min.js" />
+    <None Include="wwwroot\assets\vendor\overlay-scroll\OverlayScrollbars.min.css" />
+    <None Include="wwwroot\assets\vendor\particles\particles-custom.js" />
+    <None Include="wwwroot\assets\vendor\particles\particles.css" />
+    <None Include="wwwroot\assets\vendor\particles\particles.min.js" />
+    <None Include="wwwroot\assets\vendor\rating\raty-custom.js" />
+    <None Include="wwwroot\assets\vendor\rating\raty.js" />
+  </ItemGroup>
+
+</Project>

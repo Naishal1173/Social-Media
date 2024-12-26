@@ -1,0 +1,135 @@
+.stories-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.stories-wrapper {
+  display: flex;
+  gap: 15px;
+  margin-right: 67px;
+  overflow-x: auto;
+  padding: 10px;
+  white-space: nowrap;
+  width: 100%; /* Set width to 100% of the container */
+  max-width: 1000px; /* Set a max-width for the wrapper */
+  box-sizing: border-box; /* Ensure padding is included in width calculation */
+}
+
+.story {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  text-align: center;
+}
+
+.story.add-story {
+  background-color: #f5f5f5;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.story-icon {
+  font-size: 24px;
+  color: #666;
+}
+
+.item-preview img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.name {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #333;
+  max-width: 80px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.story-viewer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 93%;
+  height: 100%;
+  margin-left: 40px;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 36px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.story-content {
+  max-width: 90%;
+  max-height: 80%;
+}
+
+.navigation-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 36px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.prev-btn {
+  left: 20px;
+}
+
+.next-btn {
+  right: 20px;
+}
+
+.progress-bars {
+  position: absolute;
+  top: 10px;
+  display: flex;
+  gap: 5px;
+  width: 80%;
+  justify-content: center;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+}
+
+.progress-bar.active .progress {
+  background-color: white;
+}
+
+.progress {
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  transition: width 0.1s linear;
+}
